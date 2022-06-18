@@ -1,0 +1,46 @@
+table, tr, th, td, caption {
+    border: 1px solid rgb(2, 2, 2);
+    font-family: 'Courier New', 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+html {
+    font-size: 20px;
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Montserrat", sans-serif
+}
+
+.row-padding img 
+{
+    margin-bottom: 12px
+}
+
+/* Set the width of the sidebar to 120px */
+.sidebar {
+    height: 600px;
+    width: 200px;
+    background: rgba(212, 210, 212, 0.121);
+    float: "left";
+}
+.main {
+
+    float: "right" ;
+}
+
+.container {
+   
+    height: 600px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+a {
+    color:rgb(233, 116, 20);
+}
+a:visited{
+    color:rgb(233, 116, 20);
+}

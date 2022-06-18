@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head class="head">
+    <meta charset="utf-8">
+    <title>HW_1</title>
+    <link rel="icon" href="img/fcat.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <style>
+      h1 {text-align: center;}
+      h2 {text-align: center;}
+    </style>
+  </head>
+  <body class="back">
+    <header id="header">
+      <h1> Greetings, traveller </h1>
+      <h2>My name if Mikhail Surin. Welcome to my page </h2>
+    </header>
+    <div class="container">
+      <div class="item" >
+      <nav class="sidebar">
+        <!-- Avatar image in top left corner -->
+        <img src="img/Fat_cat.jpg" style="width:100%">
+        <a href="#header">
+          <p>Main</p>
+        </a>
+        <a href="Resume.txt" download>
+          <p>Resume</p>
+        </a>
+        <a href="Portfolio.html" >
+          <p>Portfolio</p>
+        </a>
+        <a href="#contact_form">
+          <p>Contact</p>
+        </a>
+      </nav>
+      </div>
+      <div class="item">
+        <main class="main">
+          <article>
+            <p>
+              That is what you need to know about me: (bulletpoints)
+            </p>
+            <ul>
+              <li>Chill person</li>
+              <li>Night owl</li>
+              <li>Lazy ass</li>
+              <li>Do everything in the last minute</li>
+              <li>However, do it well</li>
+              <li>At least I think so</li>
+            </ul>
+            
+          </article>
+          <article>
+            <p>
+              Hobbies:
+            </p>
+            <ul>
+              <li>Sci-fi literature</li>
+              <li>Space novels</li>
+              <li>Fat cats</li>
+              <li>Advanced Web Application Development with Mahmut Unan</li>
+            </ul>
+          </article>
+        </main>
+      </div>
+  </div>
+  
+      <footer>
+        <hr>
+        <p>Mail me: <a href="mailto:surin97@uab.edu">surin97@uab.edu </a></p>
+        <p>Phone me: <a href="tel:+19043252588">Call</a></p>
+        <p>Git: <a href="https://github.com/Tutturu204">Tutturu204</a></p>
+      </footer>
+  
+    
+  
+  <article id="contact_form">
+    <form action="https://httpbin.org/get" method="get">
+      <fieldset>
+        <legend><h1>Contact me</h1></legend>
+      <p>
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Mikhail"
+        required >
+      </p>
+      <p>
+        <label for="secondname">Last Name:</label>
+        <input type="text" name="secondname" id="secondname" placeholder="Surin"
+        required >
+      </p>
+      <p>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone" placeholder="(901)-321-2211"
+        required >
+      </p>
+      <p>Message:</p>
+      <p>
+      
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here">
+        </textarea>
+      </p>
+      <p>
+        <button type="submit">
+          Submit
+        </button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">
+          Post
+        </button>
+      </p>
+    </fieldset>
+    </form>
+  </article>
+  </body>
+</html>
