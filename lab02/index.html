@@ -2,28 +2,60 @@
 <html>
     <head>
         <title>Testing JavaScript</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
         <script type="text/javascript" src="main.js">
             
         </script>
     </head>
     <body>
-        <h1 >Calulator</h1>
-        <input type="text" id="input" autofocus>
-        <button name="add" onclick="add()">+ </button>
-        <button name="sub" onclick="sub()">-</button>
-        <button name="sub" onclick="mult()">*</button>
-        <button name="sub" onclick="div()">/</button>
-        <button name="output" onclick="calculate()">= </button> 
+        <h1 >Calculator</h1>
         
-        <p>Answer:</p>
-        <p id="result"></p>
-
+    <input class="input" type="text" id="input" autofocus>
+    <div class="calculator-container">
+        <div class="action">
+            <button class="btn" name="add" onclick="add()"> + </button>
+        </div>
+        <div class="action">
+            <button  class="btn" name="sub" onclick="sub()">-</button>
+        </div>
+        <div class="action">
+            <button class="btn" name="mult" onclick="mult()">*</button>
+        </div>
+        <div class="action">
+            <button class="btn" name="div" onclick="div()">/</button>
+        </div>
+        <div class="action">
+            <button class="btn" name="sqrt" onclick="sqrt()">sqrt</button>
+        </div>
+        <div class="action">
+            <button class="btn" name="power" onclick="power()">power</button>
+        </div>
+        <div class="action">
+            <button class="result" name="output" onclick="calculate()">= </button>
+        </div>
+           
+    </div>
         <article>
-            <h3>Usage of calculator:</h3>
-            <ul>
+            <h3>Rules and Hints :</h3>
+            <ul>    
+                <li>Calculator has autofocus</li>
                 <li>Enter only numbers</li>
-                <li>You can either type sympols or press the buttons</li>
-                <li>Trying enter character will occur an error</li>
+                <li>You can either type numbers or press the buttons</li>
+                <li>Entering character will cause an error</li>
+                <li>After pressing "=" button the result will apear</li>
+                <li>You <b>cannot</b> continue computation with "=" in the input</li>
+                <i>(You have to manually delete it and continue)</i> 
+                <li>Sqrt and Power has its own executer: That means to get a result you have to press them, not the "=" buton</li>
+                <li>Ex: <ul>
+                    <li>input = 4 -> <b>press sqrt(not the "=")</b> -> get a result of 2</li>
+                    
+                </ul></li>
+                <li>To get a power of a number you must provide 2 numbers: <b>Base</b> and <b>Power</b>. To Separate them you must enter <b>power</b> in the input field</li>
+                <li>Ex: <ul>
+                    <li>input = 4power2 -> <b>press power(not the "=")</b> -> get a result of 16</li>
+                    <li>input = 2+3*4power4-2 -> equal to 2+(3*4)^(4-2) -> <b>press power(not the "=")</b> -> get a result of 196</li>
+                    
+                </ul></li>
             </ul>
         </article>
     </body>
