@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> Student Records </h1>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="name">Enter Name:</label>
+            <input type="text" name="name" id="name" autofocus="autofocus">
+        </div>
+        <div class="form-group">
+            <label for="grade">Enter Grade:</label>
+            <input type="text" name="grade" id="grade">
+        </div>
+        <input type="submit" value="Add Task">
+    </form>
+    <br>
+    <form action="/results" method="GET">
+        <button class="btn btn-info" name="list" id="list" value="Input Button">List All</button>
+    </form>
+    <form action="/results/score" method="POST">
+        <label for="score">List students with a grade greater than:</label>
+        <input type="text" name="score" id="score" >
+        <input type="submit" class="btn btn-info" value="Seach">
+        
+    </form>
+</div>
+{% endblock %}

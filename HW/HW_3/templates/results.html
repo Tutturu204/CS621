@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>List of the students</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> List of the students </h1>
+    {% if tasks|length < 1%}
+    <h3> There is no tasks. Create one below</h3>
+    {% else %}
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.name }}</td>
+                <td>{{ task.grade }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/" method="GET">
+        <button class="btn btn-info" name="back" id="back" value="Input Button">Back</button>
+    </form>
+</div>
+{%endif%}
+{% endblock %}
