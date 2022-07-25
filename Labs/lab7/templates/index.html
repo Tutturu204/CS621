@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> Home </h1>
+    <p>
+        Welcome to the Password Checker!
+    </p>
+    <p>
+        Lets see if your password is secure!
+    </p>
+    <p> Rulse:
+        <ol>
+            <li>Must have an upper case letter somewhere</li>
+            <li>Must have an lower case letter somewhere</li>
+            <li>Must have a number in the end of the password</li>
+          </ol> 
+    </p>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="name">Enter Name:</label>
+            <input type="text" name="name" id="name" autofocus="autofocus">
+        </div>
+        <div class="form-group">
+            <label for="password">Enter Password:</label>
+            <input type="text" name="password" id="password">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}
