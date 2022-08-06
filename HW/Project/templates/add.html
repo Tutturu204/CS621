@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> Add a Course </h1>
+    
+    <form class="form-horizontal" action="/add" method="POST">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name" placeholder="555 Super Course" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="professor">Professor</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="professor" name="professor" placeholder="Albert Einstein">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="semester">Semester:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="semester" name="semester" placeholder="Spring">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="score">Score:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="score" name="score" placeholder="from 1 to 5 (1 very bad, 5 very nice)">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="weight">Weight:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="weight" name="weight" placeholder="place 1">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="description">Description:</label>
+            <div class="col-sm-10">
+                <input type="t" class="form-control" id="description" name="description" placeholder="Tell brief intro to this course">
+            </div>
+        </div>
+        <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+        
+    </form>
+    <a href="/home" class="btn btn-primary">Home</a>
+    
+</div>
+{% endblock %}

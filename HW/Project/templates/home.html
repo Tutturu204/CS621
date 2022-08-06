@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <center><h1 > Home  </h1></center>
+    <div class="row">
+        <div class="col-md-2">
+            <h3 class="bg-success">Menu</h3>
+            <a href="/add" class="btn btn-primary btn-lg btn-block">Add Course</a>
+            <a href="/delete" class="btn btn-primary btn-lg btn-block">Delete Course</a>
+            <a href="/update" class="btn btn-primary btn-lg btn-block">Update Course</a>
+            <a href="/library" class="btn btn-primary btn-lg btn-block">Library</a>
+            <a href="/" class="btn btn-primary btn-lg btn-block">Log Out</a>
+        </div>
+        <div class="col-md-8">
+            <h3></h3>
+            <p>Welcome to the course generator. This program is designed to help finish the master program casually. Library holds all available courses, presented at UAB by that moment.</p>
+            <p>Each course has its score, that represent the difficulty of this course. The main idea is to separate course by score and plan the semester with 3, 2 and 1 courses respectivly.</p>
+            <p>Difficulty is rated according personal experience, but as It is my second semester at UAB I have to take some reviews from the Internet.</p>
+        </div>
+        <div class="col-md-2">
+            <h3 class="bg-warning">Important</h3>
+            <p>There are 3 courses that are required to take.</p>
+            <p> Some courses is recomended to take before a specific course. </p> 
+            <p>Example: <mark>655 Deep Learning</mark> better take after <mark>667 Machine Learning</mark> and 685 Foundation of Data Science </p>
+        </div>
+    
+    </div>
+   
+    <br style = "line-height:100;">
+    <p>
+        <a href="/generate" class="btn btn-primary btn-block"> Generate a Schedule</a>
+    </p>
+</div>   
+{% endblock %}

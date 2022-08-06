@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Report</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> Shedule </h1>
+    <h3> Fall </h3>           
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Name of the course</th>
+                <th>Professor</th>
+                <th>Semester</th>
+                <th>Score</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in fall_courses %}
+            <tr> 
+                <td>{{ row.id }}</td>
+                <td>{{ row.name}}</td>
+                <td>{{ row.professor }}</td>
+                <td>{{ row.semester }}</td>
+                <td>{{ row.score }}</td>
+                <td>{{ row.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3> Spring </h3>           
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Name of the course</th>
+                <th>Professor</th>
+                <th>Semester</th>
+                <th>Score</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in spring_courses %}
+            <tr> 
+                <td>{{ row.id }}</td>
+                <td>{{ row.name}}</td>
+                <td>{{ row.professor }}</td>
+                <td>{{ row.semester }}</td>
+                <td>{{ row.score }}</td>
+                <td>{{ row.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3> Summer </h3>           
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Name of the course</th>
+                <th>Professor</th>
+                <th>Semester</th>
+                <th>Score</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in summer_courses %}
+            <tr> 
+                <td>{{ row.id }}</td>
+                <td>{{ row.name}}</td>
+                <td>{{ row.professor }}</td>
+                <td>{{ row.semester }}</td>
+                <td>{{ row.score }}</td>
+                <td>{{ row.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3> Second Fall </h3>           
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Name of the course</th>
+                <th>Professor</th>
+                <th>Semester</th>
+                <th>Score</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in second_fall_courses %}
+            <tr> 
+                <td>{{ row.id }}</td>
+                <td>{{ row.name}}</td>
+                <td>{{ row.professor }}</td>
+                <td>{{ row.semester }}</td>
+                <td>{{ row.score }}</td>
+                <td>{{ row.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/home" class="btn btn-primary">Home</a>
+</div>
+{% endblock %}
