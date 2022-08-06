@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>List of the records</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> All Records </h1>
+    {% if tasks|length < 1%}
+    <h3> There is no Records. Create one below</h3>
+    {% else %}
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Adress</th>
+            <th>Action</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.name }}</td>
+                <td>{{ task.email }}</td>
+                <td>{{ task.phone }}</td>
+                <td>{{ task.adress }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/" method="GET">
+        <button <button class="btn btn-warning" style="width: 10%;" name="back" id="back" value="Input Button">Back</button>
+    </form>
+</div>
+{%endif%}
+{% endblock %}

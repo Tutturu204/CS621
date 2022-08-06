@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Records</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <center><h1 class="bg-warning"> Records </h1></center>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Company name" autofocus="autofocus">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Phone">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="adress" id="adress" placeholder="Enter Adress">
+        </div>
+        <input class="btn btn-warning" style="width: 10%;" type="submit" value="Add Task">
+    </form>
+    <br>
+    <form action="/results" method="GET">
+        <button class="btn btn-warning" style="width: 10%;" name="list" id="list" value="Input Button">List All</button>
+    </form>
+</div>
+{% endblock %}
