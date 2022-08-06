@@ -4,7 +4,7 @@ from datetime import datetime
 from flask_migrate import Migrate
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///hw3_db.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///hw4_db.db'
 
 #database setup
 db = SQLAlchemy(app)
